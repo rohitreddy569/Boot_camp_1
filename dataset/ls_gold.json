@@ -6,9 +6,8 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"inputFile": {
-				"type": "string",
-				"defaultValue": "*.parquet"
+			"input": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -16,11 +15,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().inputFile",
+				"fileName": "*.parquet",
+				"folderPath": {
+					"value": "@dataset().input",
 					"type": "Expression"
 				},
-				"folderPath": "adi",
 				"fileSystem": "goldcontainer"
 			},
 			"compressionCodec": "snappy"
