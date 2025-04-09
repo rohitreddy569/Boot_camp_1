@@ -203,35 +203,14 @@
 					},
 					"sink": {
 						"type": "SqlDWSink",
-						"writeBehavior": "Upsert",
-						"upsertSettings": {
-							"keys": [
-								"customer_id"
-							],
-							"interimSchemaName": ""
-						},
-						"sqlWriterUseTableLock": false
+						"allowCopyCommand": true
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "ls_gold",
-						"type": "DatasetReference",
-						"parameters": {
-							"input": {
-								"value": "@activity('Etl processing').output",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
