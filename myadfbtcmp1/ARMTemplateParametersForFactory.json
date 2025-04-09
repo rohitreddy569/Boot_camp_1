@@ -5,8 +5,26 @@
 		"factoryName": {
 			"value": "myadfbtcmp1"
 		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_password": {
+			"value": ""
+		},
 		"ls_adlsgen2_accountKey": {
 			"value": ""
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0409-012818-1kmps6tr"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_server": {
+			"value": "synapsebtcmp1.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_database": {
+			"value": "mybtcmp1"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_userName": {
+			"value": "rohit569"
 		},
 		"ls_adlsgen2_properties_typeProperties_url": {
 			"value": "https://mystrg569.dfs.core.windows.net/"
