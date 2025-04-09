@@ -22,7 +22,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "GoldCustomerBalances"
+			"table": "CustomerBalances1"
 		}
 	}
 }
