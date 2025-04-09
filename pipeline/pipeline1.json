@@ -225,7 +225,13 @@
 				"inputs": [
 					{
 						"referenceName": "ls_gold",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"input": {
+								"value": "@activity('Etl processing').output",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
