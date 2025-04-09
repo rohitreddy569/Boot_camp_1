@@ -1,0 +1,39 @@
+{
+	"name": "ls_gold",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlsgen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"inputFile": {
+				"type": "string",
+				"defaultValue": "*.parquet"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().inputFile",
+					"type": "Expression"
+				},
+				"folderPath": "adi",
+				"fileSystem": "goldcontainer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "customer_id",
+				"type": "INT_32"
+			},
+			{
+				"name": "total_balance",
+				"type": "DOUBLE"
+			}
+		]
+	}
+}
