@@ -10,7 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "part-*.snappy.parquet",
+				"fileName": {
+					"value": "@concat('part-*.snappy.parquet')",
+					"type": "Expression"
+				},
 				"folderPath": "adi",
 				"fileSystem": "goldcontainer"
 			},

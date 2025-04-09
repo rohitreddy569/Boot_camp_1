@@ -195,6 +195,14 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": {
+								"value": "adi",
+								"type": "Expression"
+							},
+							"wildcardFileName": {
+								"value": "@concat('part-*.snappy.parquet')",
+								"type": "Expression"
+							},
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
